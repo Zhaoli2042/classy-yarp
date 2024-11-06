@@ -28,7 +28,8 @@ jobs:
         #pip install pipdeptree
         #pip install dask
         export CONDA_ALWAYS_YES="true"
-        pip install 'numpy==1.24.0'
+        #pip install 'numpy==1.24.0'
+        pip install 'numpy==1.24.4'
         pip install rdkit
         pip install scipy
         pip install xtb
