@@ -77,7 +77,8 @@ def rxn_xtb():
     #subprocess.call("pysis ", shell=True)
     #subprocess.call("xtb "  , shell=True)
 
-    subprocess.call("python main_xtb.py parameters.yaml", shell=True)
+    subprocess.call("python main_xtb.py parameters.yaml > TEST.txt", shell=True)
+    subprocess.call("cat TEST.txt", shell=True)
     #exec(open("main_xtb.py").read()) 
 
 
