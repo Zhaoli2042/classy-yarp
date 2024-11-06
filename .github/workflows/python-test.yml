@@ -82,6 +82,7 @@ jobs:
                # xtb and crest are in conda bin, others in pip bin
                sed -i "s|CONDA_PATH|${CONDA}|g" test_rxn.py
                pytest -s
-               ls
+               echo $(pwd); ls
+               cd RESULT/; echo $(pwd); ls
                cat IRC*
       shell: bash
