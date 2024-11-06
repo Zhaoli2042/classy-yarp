@@ -141,7 +141,7 @@ def main(args:dict):
         rxns=conf_by_crest(rxns, logging_queue, logger)
     with open(args["reaction_data"], "wb") as f:
         pickle.dump(rxns, f)
-    exit()
+    #exit()
     print("-----------------------")
     print("-------Third Step------")
     print("Conformation Generation")
@@ -149,6 +149,7 @@ def main(args:dict):
     rxns=select_rxn_conf(rxns, logging_queue)
     with open(args["reaction_data"], "wb") as f:
         pickle.dump(rxns, f)
+    #exit()
     print("-----------------------")
     print("-------Forth Step------")
     print("-Growing String Method-")
@@ -156,6 +157,7 @@ def main(args:dict):
     rxns=run_gsm_by_pysis(rxns, logging_queue)
     with open(args["reaction_data"], "wb") as f:
         pickle.dump(rxns, f)
+    #exit()
     print("-----------------------")
     print("-------Fifth Step------")
     print("------Berny TS Opt-----")
