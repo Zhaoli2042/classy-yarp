@@ -58,6 +58,8 @@ jobs:
 
                cd $home/crest-test
                $CONDA/bin/crest HGCIXCUEYOPUTN.xyz -xname -opt vtight -chrg 0 -uhf 0 -gfn2 -nozs -T 1
+               ls *.xyz
+               ls *.out
                asd
                #pysis --version
                # test Organometallics
