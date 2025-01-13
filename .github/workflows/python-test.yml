@@ -16,9 +16,11 @@ jobs:
 
     - name: Install dependencies
       run: |
-        echo $CONDA_DEFAULT_ENV
-        sed -i "s|WORKFLOW|${CONDA_DEFAULT_ENV}|g" env_linux_workflow.yaml
-        conda env update --file env_linux_workflow.yaml --prune
+        #echo $CONDA_DEFAULT_ENV
+        #sed -i "s|WORKFLOW|${CONDA_DEFAULT_ENV}|g" env_linux_workflow.yaml
+        #conda env update --file env_linux_workflow.yaml --prune
+        conda env update --file env_linux.yaml --prune
+        conda activate classy-yarp
         if [ -f pytest_requirements.txt ]; then 
           pip install -r pytest_requirements.txt; 
         fi
@@ -45,7 +47,6 @@ jobs:
         pip freeze
         # Prepare pysis env
         cp .pysisyphusrc /home/runner/.pysisyphusrc
-        cond=asd
         sed -i "s|CONDA_ENV|${CONDA}|g" /home/runner/.pysisyphusrc
     - name: Run pytest
       run: |
