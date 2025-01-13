@@ -17,9 +17,9 @@ jobs:
     - name: Install dependencies
       run: |
         conda env update --file env_linux.yaml --prune
-        #if [ -f pytest_requirements.txt ]; then 
-        #pip install -r pytest_requirements.txt; 
-        #fi
+        if [ -f pytest_requirements.txt ]; then 
+          pip install -r pytest_requirements.txt; 
+        fi
         #export CONDA_ALWAYS_YES="true"
         #pip install 'rdkit==2024.3.5'
         #pip install 'scipy==1.11.1'
