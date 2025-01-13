@@ -16,7 +16,9 @@ jobs:
 
     - name: Install dependencies
       run: |
-        conda env update --file env_linux.yaml --prune
+        echo $CONDA_DEFAULT_ENV
+        sed -i "s|WORKFLOW|${CONDA_DEFAULT_ENV}|g" env_linux_workflow.yaml
+        conda env update --file env_linux_workflow.yaml --prune
         if [ -f pytest_requirements.txt ]; then 
           pip install -r pytest_requirements.txt; 
         fi
