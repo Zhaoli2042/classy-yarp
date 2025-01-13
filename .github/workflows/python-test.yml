@@ -13,12 +13,14 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'  # Specify the Python version
+        activate-environment: classy-yarp
+        environment-file: env_linux_workflow.yaml
 
     - name: Install dependencies
       run: |
         #echo $CONDA_DEFAULT_ENV
         #sed -i "s|WORKFLOW|${CONDA_DEFAULT_ENV}|g" env_linux_workflow.yaml
-        conda env update --file env_linux_workflow.yaml --prune
+        #conda env update --file env_linux_workflow.yaml --prune
         #conda env update --file env_linux.yaml --prune
         #conda init
         #conda activate classy-yarp
