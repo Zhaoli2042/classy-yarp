@@ -23,7 +23,7 @@ jobs:
         #conda env update --file env_linux_workflow.yaml --prune
         #conda env update --file env_linux.yaml --prune
         #conda init
-        #conda activate classy-yarp
+        conda activate classy-yarp
         if [ -f pytest_requirements.txt ]; then 
           pip install -r pytest_requirements.txt; 
         fi
