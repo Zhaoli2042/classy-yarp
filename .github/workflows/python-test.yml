@@ -48,25 +48,5 @@ jobs:
       run: |
                #home=$(pwd)
                echo $CONDA
-               which xtb
-               #which crest
-               #$CONDA/bin/xtb --version
-               #$CONDA/bin/crest --version
-               #xtb
-
-               # test crest #
-               #cd $home/crest-test
-               #$CONDA/bin/crest HGCIXCUEYOPUTN.xyz -xname -opt vtight -chrg 0 -uhf 0 -gfn2 -nozs -T 1
-               #asd
-               #pysis --version
-               # test Organometallics
-               #obabel --version
-               #
-               # run Organometallic YARP Example #
-               #cd $home/examples/
-               #pytest -s
-               #cd $home/pyTEST_Example/
-               # xtb and crest are in conda bin, others in pip bin
-               #sed -i "s|CONDA_PATH|${CONDA}|g" test_rxn.py
-               #pytest -s
+               #which xtb
       shell: bash
