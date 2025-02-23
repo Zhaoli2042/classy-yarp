@@ -47,6 +47,7 @@ jobs:
     - name: Run pytest
       run: |
                #home=$(pwd)
+               source ~/.bashrc
                conda activate classy_yarp
                echo $CONDA_PREFIX
                echo $CONDA
