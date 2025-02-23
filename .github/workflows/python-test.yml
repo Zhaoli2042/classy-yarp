@@ -51,6 +51,6 @@ jobs:
                conda activate classy_yarp
                echo $CONDA_PREFIX
                echo $CONDA
-               $CONDA/bin/xtb
+               /usr/share/miniconda/envs/classy_yarp/bin/xtb
                #which xtb
       shell: bash
