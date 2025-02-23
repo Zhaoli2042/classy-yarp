@@ -48,5 +48,6 @@ jobs:
       run: |
                #home=$(pwd)
                echo $CONDA
+               $CONDA/xtb
                #which xtb
       shell: bash
