@@ -47,6 +47,8 @@ jobs:
     - name: Run pytest
       run: |
                #home=$(pwd)
+               conda activate classy_yarp
+               echo $CONDA_PREFIX
                echo $CONDA
                $CONDA/bin/xtb
                #which xtb
