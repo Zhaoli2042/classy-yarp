@@ -48,8 +48,10 @@ jobs:
       run: |
                home=$(pwd)
                echo $CONDA
-               $CONDA/bin/xtb --version
-               $CONDA/bin/crest --version
+               which xtb
+               which crest
+               #$CONDA/bin/xtb --version
+               #$CONDA/bin/crest --version
 
                # test crest #
                #cd $home/crest-test
