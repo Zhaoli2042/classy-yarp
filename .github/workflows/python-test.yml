@@ -46,13 +46,13 @@ jobs:
         
     - name: Run pytest
       run: |
-               home=$(pwd)
-               #echo $CONDA
-               #which xtb
+               #home=$(pwd)
+               echo $CONDA
+               which xtb
                #which crest
                #$CONDA/bin/xtb --version
                #$CONDA/bin/crest --version
-               xtb
+               #xtb
 
                # test crest #
                #cd $home/crest-test
