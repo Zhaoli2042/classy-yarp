@@ -31,7 +31,7 @@ jobs:
       shell: bash
       run: |
         source ~/.bashrc
-        conda env create -f env_linux.yaml
+        conda env create --name classy_yarp --file env_linux.yaml
         
     - name: Activate Conda environment
       shell: bash
