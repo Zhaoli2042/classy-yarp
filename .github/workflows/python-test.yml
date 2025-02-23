@@ -43,14 +43,17 @@ jobs:
         # Prepare pysis env
         cp .pysisyphusrc /home/runner/.pysisyphusrc
         sed -i "s|CONDA_ENV|${CONDA}|g" /home/runner/.pysisyphusrc
-        
+        pip install pytest 
     - name: Run pytest
       run: |
-               #home=$(pwd)
+               
                source ~/.bashrc
                conda activate classy_yarp
                echo $CONDA_PREFIX
                echo $CONDA
                /usr/share/miniconda/envs/classy_yarp/bin/xtb
                #which xtb
+               home=$(pwd)
+               cd $home/examples/
+               pytest -s
       shell: bash
